@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import WalletProvider from "@/providers/WalletProvider";
-import ApiProvider from "@/providers/ApiProvider";
-import { Toaster } from "@/components/ui/toaster";
 
+import { SubstrateProvider } from "@/providers/useSubstrateContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,18 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <WalletProvider>
-            <ApiProvider>
-            
-            <Toaster />
+        <SubstrateProvider>
+          
 
-              {children}
-           
-        
-
-            </ApiProvider>
-            
-          </WalletProvider>
+          {children}
+        </SubstrateProvider>
       </body>
     </html>
   );
