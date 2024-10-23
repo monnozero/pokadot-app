@@ -13,7 +13,7 @@ import React, { useCallback, useEffect } from 'react'
 const LoginPage = () => {
 
   const { isFire } = useIsFire()
-  const { setAddress, setIsConnected } = useSubstrateContext();
+  const { setAddress, setIsConnected, address } = useSubstrateContext();
 
   useEffect(() => {
     if (isFire) {
@@ -66,8 +66,10 @@ const LoginPage = () => {
 
 <ButtonWallet/>
 
+{
 
-<SigMessage/>
+  address &&  <SigMessage/>
+}
             </div>
         </div>
 

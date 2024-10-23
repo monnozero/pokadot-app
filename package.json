@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@polkadot/api": "^9.5.1",
-    "@polkadot/api-contract": "^9.5.1",
+    "@polkadot/api": "^11.3.1",
+    "@polkadot/api-contract": "^11.3.1",
     "@polkadot/types": "^14.0.1",
     "@polkadot/util": "^12.6.2",
     "@polkadot/util-crypto": "^9.7.2",
