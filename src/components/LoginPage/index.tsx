@@ -1,10 +1,7 @@
 'use client'
 import WalletLoginIcon from '@/assets/WalletLoginIcon'
 import ButtonWallet from '@/components/ButtonWallet'
-import WalletSelection from '@/components/dialog/WalletSelection'
 import SigMessage from '@/components/LoginPage/SigMessage'
-
-import { Button } from '@/components/ui/button'
 import useIsFire from '@/hooks/useIsFire'
 import { useSubstrateContext } from '@/providers/useSubstrateContext'
 import { ConnectRes } from '@/types'

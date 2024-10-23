@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { Toast } from "@/components/ui/toast";
+import { getAddress } from "@/lib/utils";
 
 import { useSubstrateContext } from "@/providers/useSubstrateContext";
 import { ConnectRes } from "@/types";
@@ -69,7 +70,7 @@ const ButtonWallet = () => {
     
       {isConnected ? (
         <Button onClick={handleDisconnect} className="max-w-[350px] w-full">
-          Disconnect Wallet {address && address}
+          Disconnect {address &&  getAddress(address)}
         </Button>
       ) : (
         <Button 

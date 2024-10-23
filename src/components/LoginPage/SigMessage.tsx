@@ -4,6 +4,7 @@ import { LoadingButton } from "@/components/ui/loading-button";
 import { getApi } from "@/config/utils";
 import { useSubstrateContext } from "@/providers/useSubstrateContext";
 import { stringToHex } from "@polkadot/util";
+import { Toast } from "@radix-ui/react-toast";
 import React, { useState } from "react";
 
 const SigMessage = () => {
@@ -62,6 +63,12 @@ const SigMessage = () => {
         console.log("res", res);
 
         setIsLoading(false);
+        Toast(
+          {
+            content: `Transaction sent successfully`,
+         
+          }
+        )
       }
     } catch (e) {
       setIsLoading(false);
@@ -72,7 +79,7 @@ const SigMessage = () => {
   return (
     <div>
       <LoadingButton loading={isLoading} onClick={handleSendMessage}>
-        Send Message
+        Transfer
       </LoadingButton>
     </div>
   );
