@@ -2,7 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { LoadingButton } from "@/components/ui/loading-button";
 import { getApi } from "@/config/utils";
-import { useSubstrateContext } from "@/providers/useSubstrateContext";
+import { useSubstrateContext } from "@/contexts/useSubstrateContext";
 import { stringToHex } from "@polkadot/util";
 import { Toast } from "@radix-ui/react-toast";
 import React, { useState } from "react";

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { SubstrateProvider } from "@/providers/useSubstrateContext";
+import { SubstrateProvider } from "@/contexts/useSubstrateContext";
 import "@/app/globals.css";
 
 

@@ -3,7 +3,7 @@ import WalletLoginIcon from '@/assets/WalletLoginIcon'
 import ButtonWallet from '@/components/ButtonWallet'
 import SigMessage from '@/components/LoginPage/SigMessage'
 import useIsFire from '@/hooks/useIsFire'
-import { useSubstrateContext } from '@/providers/useSubstrateContext'
+import { useSubstrateContext } from '@/contexts/useSubstrateContext'
 import { ConnectRes } from '@/types'
 import React, { useCallback, useEffect } from 'react'
 
