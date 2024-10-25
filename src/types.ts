@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { Dispatch, ReactNode, SetStateAction } from 'react';
 
 export interface Props {
   className?: string;
@@ -66,3 +66,10 @@ export interface ChainProps {
 export type ChainPropType = {
   [index: string]: ChainProps;
 };
+
+
+export interface ConnectRes {
+  evmAddress: string
+  nativeAddress: string
+  publicKey: string
+}
