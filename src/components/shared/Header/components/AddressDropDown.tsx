@@ -1,14 +1,13 @@
 'use client'
-import WalletLoginIcon from '@/assets/WalletLoginIcon'
-import ButtonWallet from '@/components/ButtonWallet'
-import SigMessage from '@/components/LoginPage/SigMessage'
-import useIsFire from '@/hooks/useIsFire'
+import AddressIcon from '@/assets/AddressIcon'
 import { useSubstrateContext } from '@/contexts/useSubstrateContext'
+import useIsFire from '@/hooks/useIsFire'
+import { getAddress } from '@/lib/utils'
 import { ConnectRes } from '@/types'
 import React, { useCallback, useEffect } from 'react'
 
-const LoginPage = () => {
-
+const AddressDropDown = () => {
+    
   const { isFire } = useIsFire()
   const { setAddress, setIsConnected, address } = useSubstrateContext();
 
@@ -44,30 +43,12 @@ const LoginPage = () => {
     console.log('Network changed')
   }
   return (
-    <div className='w-full h-[100vh] flex text-white'>
-        <div className="w-[40%] h-full bg-[url('/login-page-frame.webp')] bg-no-repeat bg-cover bg-center"></div>
-        <div className='w-[60%] h-full bg-gray-900 p-[30px] flex flex-col gap-5'>
-            <div></div>
-            <div className='w-full h-full bg-black flex flex-col gap-[10px] items-center justify-center '>
-                    <WalletLoginIcon/>
-                    <p className='font-bold'>Get Started
-                    </p>
-                    <p className='text-sm'>Connect your wallet
+    <div className="flex items-center justify-center gap-2 border border-[#1573fe] py-2 px-4 rounded-lg">
+        <AddressIcon/>
+    <p className="">{address &&  getAddress(address)}</p>
+  </div>
 
-</p>
-<p className='text-sm'>Your first step towards creating a safe & secure MultiSig
-
-</p>
-{/* <Button className='max-w-[350px] w-full'>Connect Wallet</Button> */}
-{/* <WalletSelection/> */}
-
-<ButtonWallet/>
-
-            </div>
-        </div>
-
-    </div>
   )
 }
 
-export default LoginPage
+export default AddressDropDown
